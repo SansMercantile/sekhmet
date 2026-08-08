@@ -1,0 +1,168 @@
+/* SEKHMET Security Theme */
+/* Threat Intelligence & Security Operations Colors */
+
+:root {
+  /* SEKHMET Security Color Scheme */
+  --system-primary: #ff4444;      /* Alert Red */
+  --system-secondary: #ff8844;    /* Warning Orange */
+  --system-accent: #44ff88;       /* Success Green */
+  --system-bg: #0a0a0a;           /* Dark Background */
+  --system-card-bg: #1a1a1a;      /* Card Background */
+  --system-text: #ffffff;         /* White Text */
+  --system-text-secondary: #cccccc; /* Light Gray Text */
+
+  /* Security-specific colors */
+  --threat-critical: #ff0000;
+  --threat-high: #ff6600;
+  --threat-medium: #ffaa00;
+  --threat-low: #ffff00;
+  --threat-info: #00ffff;
+  --secure-green: #00ff00;
+}
+
+/* Security Status Indicator */
+.security-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(26, 26, 26, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  z-index: 1001;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--system-primary);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.active {
+  background: var(--secure-green);
+  box-shadow: 0 0 10px var(--secure-green);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Threat Level Indicators */
+.threat-critical { color: var(--threat-critical); }
+.threat-high { color: var(--threat-high); }
+.threat-medium { color: var(--threat-medium); }
+.threat-low { color: var(--threat-low); }
+.threat-info { color: var(--threat-info); }
+
+/* Security Dashboard Cards */
+.security-card {
+  background: linear-gradient(135deg, var(--system-card-bg) 0%, rgba(255, 68, 68, 0.1) 100%);
+  border: 1px solid var(--system-primary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.security-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 68, 68, 0.2);
+  border-color: var(--system-secondary);
+}
+
+/* Alert Animations */
+.alert-pulse {
+  animation: alertPulse 1s ease-in-out infinite;
+}
+
+@keyframes alertPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+  }
+}
+
+/* Incident Timeline */
+.incident-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.incident-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--system-primary), var(--system-secondary));
+}
+
+.incident-event {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.incident-event::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--system-primary);
+}
+
+/* Threat Map */
+.threat-map {
+  background: linear-gradient(135deg, var(--system-bg) 0%, var(--system-card-bg) 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.threat-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(255, 68, 68, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 136, 68, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(68, 255, 136, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Security Metrics */
+.security-metric {
+  text-align: center;
+  padding: 1rem;
+  background: var(--system-card-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.security-metric .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--system-primary);
+  font-family: 'Orbitron', monospace;
+}
+
+.security-metric .label {
+  font-size: 0.9rem;
+  color: var(--system-text-secondary);
+  margin-top: 0.5rem;
+}
