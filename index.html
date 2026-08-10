@@ -3,114 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEKHMET™ | Threat Intelligence & Security Operations</title>
+  <title>SEKHMET | Threat Intelligence & Security Operations</title>
   <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
-  <link rel="stylesheet" href="/shared/constellation-base.css" />
-  <link rel="stylesheet" href="/css/sekhmet-theme.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <meta name="description" content="SEKHMET™ - Advanced Threat Intelligence & Security Operations Center featuring real-time threat detection, incident response, and comprehensive security monitoring." />
-  <meta name="keywords" content="threat intelligence, security operations, incident response, cybersecurity, threat detection" />
-  <meta property="og:title" content="SEKHMET™ | Threat Intelligence & Security Operations" />
-  <meta property="og:description" content="Advanced Threat Intelligence & Security Operations Center for comprehensive cybersecurity protection." />
+  <meta name="description" content="SEKHMET - Security operations dashboard for the Sans Mercantile Constellation: infrastructure health, code security posture, and incident tracking." />
+  <meta property="og:title" content="SEKHMET | Threat Intelligence & Security Operations" />
+  <meta property="og:description" content="Security operations dashboard for the Sans Mercantile Constellation." />
 </head>
 <body>
-  <!-- Neural Grid Background -->
-  <div class="neural-grid-bg"></div>
-
-  <!-- Particle System Container -->
-  <div class="particle-system"></div>
-
-  <!-- Security Status Indicator -->
-  <div class="security-status">
-    <span class="status-dot active"></span>
-    System Status: <span id="security-level">SECURE</span>
-  </div>
-
-  <!-- Header Navigation -->
-  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 26, 10, 0.9); backdrop-filter: blur(10px); padding: 1rem 2rem;">
-    <nav style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="logo-container">
-        <div class="logo-word">SEKHMET</div>
-        <img class="logo-icon" src="img/logo.svg" alt="SEKHMET Icon" />
-      </div>
-      <div style="display: flex; gap: 2rem; align-items: center;">
-        <a href="#threats" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Threats</a>
-        <a href="#incidents" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Incidents</a>
-        <a href="#intelligence" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Intelligence</a>
-        <a href="#operations" style="color: var(--system-text); text-decoration: none; transition: color 0.3s;">Operations</a>
-        <a class="cta" href="mailto:sekhmet@sansmercantile.com?subject=SEKHMET%20Access%20Request">Request Access</a>
-      </div>
-    </nav>
-  </header>
-
-  <main role="main" style="padding-top: 100px;">
-    <!-- Hero Section -->
-    <section class="interactive-section" data-aos="fade-up" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
-      <div class="logo-container" style="margin-bottom: 2rem;">
-        <div class="logo-word">SEKHMET</div>
-        <div class="tagline">Threat Intelligence & Security Operations</div>
-      </div>
-
-      <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h1 style="font-size: 4rem; margin-bottom: 2rem; background: linear-gradient(45deg, #ff4444, #ff8844); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Advanced Threat Detection</h1>
-        <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 3rem; color: var(--system-text-secondary);">
-          Real-time threat intelligence, automated incident response, and comprehensive security monitoring
-          across the entire Sans Mercantile Constellation.
-        </p>
-
-        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0;">
-          <div class="stat-card">
-            <div class="stat-number">2,847</div>
-            <div class="stat-label">Active Threats Monitored</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">99.7%</div>
-            <div class="stat-label">Detection Accuracy</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">&lt; 5min</div>
-            <div class="stat-label">Response Time</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dashboard Container -->
-    <div id="dashboard-root"></div>
-
-    <!-- Features Section -->
-    <section id="threats" class="features-section" data-aos="fade-up">
-      <div class="container">
-        <h2>Threat Intelligence Dashboard</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Real-time Threat Detection</h3>
-            <p>Advanced AI-powered threat detection across all network layers and system components.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Incident Response Automation</h3>
-            <p>Automated incident triage, containment, and remediation workflows.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Intelligence Correlation</h3>
-            <p>Cross-system threat intelligence correlation and pattern analysis.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer style="background: rgba(10, 26, 10, 0.8); padding: 2rem; text-align: center; margin-top: 4rem;">
-    <p>&copy; 2026 Sans Mercantile Constellation - SEKHMET Security Operations Center</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="/shared/constellation-interactive.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <div id="dashboard-root"></div>
   <script type="module" src="/src/index.jsx"></script>
 </body>
 </html>
