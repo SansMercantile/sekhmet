@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { initDatadog } from './lib/datadog.js';
+
+initDatadog();
 
 const root = ReactDOM.createRoot(document.getElementById('dashboard-root'));
 root.render(
